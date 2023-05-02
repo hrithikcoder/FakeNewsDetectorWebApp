@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/image/earth.png" type="image/x-icon">
+    <title>Fake News Detection!</title>
+
+  </head>
+    <body>
+       <header class="text-gray-600 body-font -my-8">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <!--<svg xmlns="http://www.w3.org/200/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>-->
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" xml:space="preserve" width="50px" height="50px" fill="#000000" stroke="#000000" stroke-width="0.00064">
+
+                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                
+                <g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#9272df;} .st1{opacity:1;} .st2{fill:#231F20;} .st3{fill:#E0E0D1;} .st4{fill:#4f5d72;} </style> <g id="Layer_1"> <g> <circle class="st0" cx="32" cy="32" r="32"/> </g> <g class="st1"> <path class="st2" d="M52,50c0,2.2-1.8,4-4,4H16c-2.2,0-4-1.8-4-4V22c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4V50z"/> </g> <g> <path class="st3" d="M52,48c0,2.2-1.8,4-4,4H16c-2.2,0-4-1.8-4-4V20c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4V48z"/> </g> <g class="st1"> <path class="st2" d="M52,46c0,2.2-1.8,4-4,4H16c-2.2,0-4-1.8-4-4V18c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4V46z"/> </g> <g> <path class="st3" d="M52,44c0,2.2-1.8,4-4,4H16c-2.2,0-4-1.8-4-4V16c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4V44z"/> </g> <g> <rect x="16" y="24" class="st4" width="12" height="12"/> </g> <g> <rect x="36" y="27" class="st4" width="12" height="1"/> </g> <g> <rect x="36" y="25" class="st4" width="12" height="1"/> </g> <g> <rect x="32" y="24" class="st4" width="3" height="4"/> </g> <g> <rect x="32" y="30" class="st4" width="16" height="1"/> </g> <g> <rect x="32" y="32" class="st4" width="16" height="1"/> </g> <g> <rect x="32" y="34" class="st4" width="16" height="1"/> </g> <g> <rect x="32" y="36" class="st4" width="16" height="1"/> </g> <g> <rect x="35.9" y="39" class="st4" width="12.1" height="1"/> </g> <g> <rect x="16" y="39" class="st4" width="12" height="1"/> </g> <g> <rect x="16" y="41" class="st4" width="12" height="1"/> </g> <g> <rect x="16" y="43" class="st4" width="12" height="1"/> </g> <g> <rect x="16" y="45" class="st4" width="12" height="1"/> </g> <g> <rect x="32" y="41" class="st4" width="16" height="1"/> </g> <g> <rect x="32" y="43" class="st4" width="16" height="1"/> </g> <g> <rect x="32" y="45" class="st4" width="16" height="1"/> </g> <g> <circle class="st3" cx="24" cy="28" r="2"/> </g> <g> <rect x="16" y="16" class="st4" width="32" height="4"/> </g> <g> <g> <path class="st3" d="M27,35v-2.4l-0.8-0.8c-0.5-0.5-1.3-0.5-1.8,0l-0.8,0.8l-1.9-1.9c-1-1-2.6-1-3.5,0L17,31.9V35H27z"/> </g> </g> </g> <g id="Layer_2"> </g> </g>
+                
+            </svg>
+            <span class="ml-3 text-xl ">Fake News Detection</span>
+          
+          </a>
+         
+         
+        </div>
+       </header> <hr>
+      <section class="text-gray-600 body-font -my-8">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <h1  class="title-font sm:text-4xl text-3xl mb-4 font-medium text-rose-600 uppercase decoration-double">Fake News Detector
+              <br class="hidden lg:inline-block">
+            </h1>
+            <p  class="mb-8 leading-relaxed ">The Fake News Detect app is a powerful tool designed to help users identify false information circulating on the internet. Using advanced algorithms and machine learning techniques, this app analyzes news articles, social media posts, and other online content to determine their credibility and reliability. </p>
+            <div class="flex justify-center">
+                <a href="/prediction"><button class="inline-flex text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg">Predict News</button>
+                </a>
+              
+            </div>
+          </div>
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <img class="object-cover object-center rounded" alt="hero" src="/static/image/29013792_7450160.jpg">
+          </div>
+        </div>
+      </section>
+      <hr>
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+          <div class="flex flex-wrap w-full">
+            <div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+              <div class="flex relative pb-12">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 1</h2>
+                  <p class="leading-relaxed text-indigo-600	">Copy the news headline </p>
+                </div>
+              </div>
+              <div class="flex relative pb-12">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 2</h2>
+                  <p class="leading-relaxed text-indigo-600	">Open fake news detector website</p>
+                </div>
+              </div>
+              <div class="flex relative pb-12">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <circle cx="12" cy="5" r="3"></circle>
+                    <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 3</h2>
+                  <p class="leading-relaxed text-indigo-600	">Click Predict News botton in website</p>
+                </div>
+              </div>
+              <div class="flex relative pb-12">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">STEP 4</h2>
+                  <p class="leading-relaxed text-indigo-600	">Paste the headline text in the textarea</p>
+                </div>
+              </div>
+              <div class="flex relative">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                    <path d="M22 4L12 14.01l-3-3"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">FINISH</h2>
+                  <p class="leading-relaxed text-indigo-600	">Click on detect botton and you will get your result</p>
+                </div>
+              </div>
+            </div>
+            <img class="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12" src="/static/image/note.jpg" alt="step">
+          </div>
+        </div>
+      </section>
+      <hr>
+      
+      <section class="text-gray-600 body-font -my-8">
+        <div class="container px-5 py-24 mx-auto">
+          <h1 class="text-3xl font-medium title-font text-rose-600 mb-12 text-center">Testimonials</h1>
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 md:w-1/2 w-full">
+              <div class="h-full bg-gray-100 p-8 rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
+                  <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                </svg>
+                <p class="leading-relaxed mb-6">"The Fake News Detect app is a game-changer! As someone who spends a lot of time on social media, I've fallen prey to fake news more than once. This app has helped me weed out false information and keep my facts straight. I highly recommend it!"</p>
+                <a class="inline-flex items-center">
+                  <img alt="testimonial" src="/static/image/userone.png" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+                  <span class="flex-grow flex flex-col pl-4">
+                    <span class="title-font font-medium text-gray-900">Holden Caulfield</span>
+                    <span class="text-gray-500 text-sm">UI DEVELOPER</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/2 w-full">
+              <div class="h-full bg-gray-100 p-8 rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
+                  <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                </svg>
+                <p class="leading-relaxed mb-6">"As a journalist, I'm always on the lookout for reliable sources and accurate information. The Fake News Detect app has become an indispensable tool in my research process. It's quick, easy to use, and has saved me countless hours fact-checking."</p>
+                <a class="inline-flex items-center">
+                  <img alt="testimonial" src="/static/image/userteo.png" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+                  <span class="flex-grow flex flex-col pl-4">
+                    <span class="title-font font-medium text-gray-900">Alper Kamu</span>
+                    <span class="text-gray-500 text-sm">JOURNALIST</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <footer class="text-gray-600 body-font -my-8">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap md:text-left text-center order-first">
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a href="https://hrithikcoder.github.io/portfolio.github.io/" class="text-gray-600 hover:text-gray-800">PORTFOLIO</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">NIKE LANDING PAGE</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">TEXT EDITOR WEBSITE</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">GAME STORE WEBSITE</a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">SUPPORT</h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Conatct us</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">FAQ</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Message Us</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Explore</a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">More To Explore</h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Facebook</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Twitter</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Linkedin</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Github</a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Sign Up</h2>
+              <div class="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
+                <div class="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+                  <label for="footer-field" class="leading-7 text-sm text-gray-600">Email</label>
+                  <input type="text" id="footer-field" name="footer-field" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-purple-200 focus:border-purple-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+                <button class="lg:mt-0 xl:mt-5 flex-shrink-0 inline-flex text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded">Button</button>
+              </div>
+              <p class="text-gray-500 text-sm mt-5 md:text-left text-center">"Let's connect and create together."
+                <br class="lg:block hidden">
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-100">
+          <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" xml:space="preserve" width="50px" height="50px" fill="#000000" stroke="#000000" stroke-width="0.00064">
+
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                    
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                    
+                    <g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#9272df;} .st1{opacity:1;} .st2{fill:#231F20;} .st3{fill:#E0E0D1;} .st4{fill:#4f5d72;} </style> <g id="Layer_1"> <g> <circle class="st0" cx="32" cy="32" r="32"/> </g> <g class="st1"> <path class="st2" d="M52,50c0,2.2-1.8,4-4,4H16c-2.2,0-4-1.8-4-4V22c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4V50z"/> </g> <g> <path class="st3" d="M52,48c0,2.2-1.8,4-4,4H16c-2.2,0-4-1.8-4-4V20c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4V48z"/> </g> <g class="st1"> <path class="st2" d="M52,46c0,2.2-1.8,4-4,4H16c-2.2,0-4-1.8-4-4V18c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4V46z"/> </g> <g> <path class="st3" d="M52,44c0,2.2-1.8,4-4,4H16c-2.2,0-4-1.8-4-4V16c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4V44z"/> </g> <g> <rect x="16" y="24" class="st4" width="12" height="12"/> </g> <g> <rect x="36" y="27" class="st4" width="12" height="1"/> </g> <g> <rect x="36" y="25" class="st4" width="12" height="1"/> </g> <g> <rect x="32" y="24" class="st4" width="3" height="4"/> </g> <g> <rect x="32" y="30" class="st4" width="16" height="1"/> </g> <g> <rect x="32" y="32" class="st4" width="16" height="1"/> </g> <g> <rect x="32" y="34" class="st4" width="16" height="1"/> </g> <g> <rect x="32" y="36" class="st4" width="16" height="1"/> </g> <g> <rect x="35.9" y="39" class="st4" width="12.1" height="1"/> </g> <g> <rect x="16" y="39" class="st4" width="12" height="1"/> </g> <g> <rect x="16" y="41" class="st4" width="12" height="1"/> </g> <g> <rect x="16" y="43" class="st4" width="12" height="1"/> </g> <g> <rect x="16" y="45" class="st4" width="12" height="1"/> </g> <g> <rect x="32" y="41" class="st4" width="16" height="1"/> </g> <g> <rect x="32" y="43" class="st4" width="16" height="1"/> </g> <g> <rect x="32" y="45" class="st4" width="16" height="1"/> </g> <g> <circle class="st3" cx="24" cy="28" r="2"/> </g> <g> <rect x="16" y="16" class="st4" width="32" height="4"/> </g> <g> <g> <path class="st3" d="M27,35v-2.4l-0.8-0.8c-0.5-0.5-1.3-0.5-1.8,0l-0.8,0.8l-1.9-1.9c-1-1-2.6-1-3.5,0L17,31.9V35H27z"/> </g> </g> </g> <g id="Layer_2"> </g> </g>
+                    
+                </svg>
+              <span class="ml-3 text-xl">Fake News Detection!</span>
+            </a>
+            <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2023 —
+              <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">hrithikdas600@gmail.com</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+              <a class="text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                  <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
